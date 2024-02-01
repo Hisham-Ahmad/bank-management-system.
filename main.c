@@ -271,6 +271,7 @@ void TransferMoney(struct Account *accounts, int numAccount)
             printf(".");
             sleep(1);
         }
+        printf("\n");
         printf("\t\t\tYour Money transfered successfully :) \n");
         printf("\t\t\tYour Amount is %0.2f \n",accounts[senderID -1].balane);
         sleep(2);
