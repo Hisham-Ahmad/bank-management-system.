@@ -265,7 +265,7 @@ void TransferMoney(struct Account *accounts, int numAccount)
     accounts[senderID - 1 ].balane -=amount_to_transfer ;
     accounts[ReceiverID - 1 ].balane += amount_to_transfer;
     printf("\t\t\t==============================================\n");
-    printf("\t\t\tPlease Wait\n");
+    printf("\t\t\tPlease Wait");
     for( int i=0; i < 4 ; i++)
         {
             printf(".");
