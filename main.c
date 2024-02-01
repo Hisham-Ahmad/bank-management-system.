@@ -136,22 +136,15 @@ void withdraw(struct Account *accounts , int numAccount)
     printf("\t\t\tEnter your ID : ");
     scanf("%d", &user_input_id );
 
-    if(user_input_id == NULL || user_input_id > numAccount || user_input_id <= 0)
-    {
-        printf("\t\t\tWrong ID !! ): !! \n\t\t\tI Got You Robber !!\n");
-        return ;
-    }
-
     fflush(stdin);
     printf("\t\t\tEnter Account password : ");
     fgets(user_input_password, sizeof(user_input_password), stdin);
 
-    if (strcmp(user_input_password, accounts[user_input_id - 1 ].password) != 0)
+    if(user_input_id == NULL || user_input_id > numAccount || user_input_id <= 0 || strcmp(user_input_password, accounts[user_input_id - 1 ].password) != 0)
     {
-        printf("\t\t\tAccess denied. Incorrect password!\n\t\t\tI Got You Robber !! :) \n");
-        return;
+        printf("\t\t\tWrong Data!! ): !! \n\t\t\tI Got You Robber !!\n");
+        return ;
     }
-
     printf("\t\t\t\t\t     welcome %s" , accounts[user_input_id - 1].name);
     printf("\t\t\tEnter your withdraw amount : ");
     scanf("%f" , &amount);
